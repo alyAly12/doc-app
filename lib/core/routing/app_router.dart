@@ -4,6 +4,8 @@ import 'package:doc_app/features/signup_feature/presentation/screens/signup_scre
 import 'package:doc_app/features/splash_feature/presentation/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
+import '../../features/home_feature/presentation/screens/home_screen.dart';
+
 class AppRouter {
   Route? generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -13,6 +15,8 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const LoginScreen());
         case Routes.signupScreen:
         return MaterialPageRoute(builder: (_) => const SignupScreen());
+        case Routes.homeScreen:
+        return MaterialPageRoute(builder: (_) => const HomeScreen());
       default:
         return null;
     }
