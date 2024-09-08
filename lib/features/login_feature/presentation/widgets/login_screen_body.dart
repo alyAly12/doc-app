@@ -1,8 +1,10 @@
+import 'package:doc_app/core/helper/extenstions.dart';
 import 'package:doc_app/features/login_feature/presentation/widgets/terms_and_conditions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/common_widgets/custom_button.dart';
 import '../../../../core/common_widgets/custom_text_widget.dart';
+import '../../../../core/routing/routes.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_strings.dart';
 import 'dont_have_account_widget.dart';
@@ -58,7 +60,9 @@ class LoginScreenBody extends StatelessWidget {
                     height: 50.h,
                   ),
                   CustomButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        context.pushNamed(Routes.homeScreen);
+                      },
                       title: AppStrings.login,
                       textSize: 20.sp,
                       textWeight: FontWeight.bold,
