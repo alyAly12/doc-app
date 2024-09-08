@@ -1,6 +1,8 @@
+import 'package:doc_app/core/helper/extenstions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/common_widgets/custom_button.dart';
+import '../../../../core/routing/routes.dart';
 import 'doc_and_text_widget.dart';
 import 'logo_widget.dart';
 
@@ -26,7 +28,7 @@ class SplashScreenBody extends StatelessWidget {
             ),
             CustomButton(
                 onPressed: () {
-                  // context.pushReplacementNamed(Routes.loginScreen);
+                  context.pushReplacementNamed(Routes.loginScreen);
                 },
                 title: 'Get Started',
                 textSize: 20.sp,
