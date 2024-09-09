@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 
 import '../../features/calendar_feature/presentation/screens/calendar_screen.dart';
 import '../../features/home_feature/presentation/screens/home_screen.dart';
+import '../../features/home_feature/presentation/screens/inner_screens/view_all_doc_speciality.dart';
 import '../../features/profile_feature/presentation/screens/profile_screen.dart';
 import '../../features/search_feature/presentation/screens/search_screen.dart';
 import '../../features/support_feature/presentation/screens/support_screen.dart';
@@ -32,6 +33,8 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const SupportScreen());
         case Routes.profileScreen:
         return MaterialPageRoute(builder: (_) => const ProfileScreen());
+      case Routes.viewAllDocSpeciality:
+        return MaterialPageRoute(builder: (_) => const ViewAllDocSpeciality());
       default:
         return null;
     }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'core/routing/app_router.dart';
 import 'core/routing/routes.dart';
@@ -21,6 +22,9 @@ class DoctorApp extends StatelessWidget {
         initialRoute: Routes.splashScreen,
         title: 'Doctor App',
         theme: ThemeData(
+          textTheme: GoogleFonts.abyssinicaSilTextTheme(
+            Theme.of(context).textTheme
+          ),
             primaryColor: AppColors.mainColor,
             scaffoldBackgroundColor: AppColors.whiteColor),
         onGenerateRoute: appRouter.generateRoute,

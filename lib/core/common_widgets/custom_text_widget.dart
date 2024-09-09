@@ -31,7 +31,6 @@ class CustomTextWidget extends StatelessWidget {
           decorationColor: AppColors.mainColor,
           color: color,
           fontSize: fontSize.sp,
-          fontFamily: 'Roboto',
           fontWeight: fontWeight,
           overflow: TextOverflow.ellipsis),
     );
