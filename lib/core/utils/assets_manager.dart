@@ -16,5 +16,19 @@ class AssetsManager{
   static String myTests = 'assets/images/my-test.png';
   static String payments = 'assets/images/pay.png';
   static String loadingLottie = 'assets/lotties/loading.json';
+  ///speciality images
+  static String generalSpeciality = 'assets/speciality/generalist.png';
+  static String pediatricSpeciality = 'assets/speciality/pediatric.png';
+  static String hepatologySpeciality = 'assets/speciality/hepatology.png';
+  static String neurologySpeciality = 'assets/speciality/neurology.png';
+  static String heartSpeciality = 'assets/speciality/cardio.png';
+  static String entSpeciality = 'assets/speciality/ent.png';
+  static String histologySpeciality = 'assets/speciality/histology.png';
+  static String intensitySpeciality = 'assets/speciality/intestine.png';
+  static String optometrySpeciality = 'assets/speciality/optometry.png';
+  static String pulmonologySpeciality = 'assets/speciality/pulmonary.png';
+  static String urologySpeciality = 'assets/speciality/urology.png';
+  static String radiologySpeciality = 'assets/speciality/dentest.png';
+
 
 }
