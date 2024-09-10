@@ -29,6 +29,7 @@ class AssetsManager{
   static String pulmonologySpeciality = 'assets/speciality/pulmonary.png';
   static String urologySpeciality = 'assets/speciality/urology.png';
   static String radiologySpeciality = 'assets/speciality/dentest.png';
+  static String theme = 'assets/images/theme.png';
 
 
 }

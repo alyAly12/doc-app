@@ -6,5 +6,6 @@ import 'doctor_app.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await ScreenUtil.ensureScreenSize();
+
   runApp(DoctorApp(appRouter: AppRouter()));
 }

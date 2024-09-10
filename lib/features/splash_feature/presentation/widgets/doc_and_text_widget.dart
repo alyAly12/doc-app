@@ -28,7 +28,7 @@ class DocAndTextWidget extends StatelessWidget {
               fit: BoxFit.cover,
             )),
         Positioned(
-          bottom: 50.h,
+          bottom: 60.h,
           left: 0,
           right: 0,
           child: Center(
@@ -42,14 +42,13 @@ class DocAndTextWidget extends StatelessWidget {
           ),
         ),
         Positioned(
-          bottom: 3,
+          bottom: 0.h,
           left: 0,
           right: 0,
           child: Center(
             child: CustomTextWidget(
-              title:
-                  'Manage and schedule all of your medical appointments\neasily with Docdoc to get a new experience.',
-              fontSize: 13.sp,
+              title: 'Manage and schedule all of your medical appointments\neasily with Docdoc to get a new experience.',
+              fontSize: 12.sp,
               maxLines: 3,
               color: AppColors.lightTitleColor,
               textAlign: TextAlign.center,

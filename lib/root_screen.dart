@@ -35,7 +35,6 @@ class _RootScreenState extends State<RootScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       floatingActionButton: SizedBox(
         width: 70.w,
         height: 70.h,
@@ -64,7 +63,7 @@ class _RootScreenState extends State<RootScreen> {
         children: screens,
       ),
       bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Colors.white,
+
           elevation: 0,
           selectedFontSize: 18.sp,
           unselectedFontSize: 15.sp,
