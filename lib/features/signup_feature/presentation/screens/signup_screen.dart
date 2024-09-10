@@ -13,7 +13,6 @@ class SignupScreen extends StatelessWidget {
         FocusScope.of(context).unfocus();
       },
       child: const Scaffold(
-          backgroundColor: Colors.white,
           body:SignupScreenBody()
       ),
     );

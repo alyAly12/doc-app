@@ -11,7 +11,6 @@ class ViewAllDocSpeciality extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: AppBar(
         title: const CustomTextWidget(
           title: AppStrings.docSpecialist,
@@ -19,14 +18,12 @@ class ViewAllDocSpeciality extends StatelessWidget {
         ),
         centerTitle: true,
         elevation: 0,
-        backgroundColor: Colors.transparent,
         leading: IconButton(
             onPressed: () {
               context.pop();
             },
             icon: const Icon(
               Icons.arrow_back_ios_new,
-              color: Colors.black,
             )),
       ),
       body: const ViewAllDocSpecialityBody(),

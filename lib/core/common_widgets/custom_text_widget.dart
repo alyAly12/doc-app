@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../utils/app_colors.dart';
 
 
@@ -29,7 +28,7 @@ class CustomTextWidget extends StatelessWidget {
           decoration: textDecoration,
           decorationThickness: 2,
           decorationColor: AppColors.mainColor,
-          color: color,
+          color:color,
           fontSize: fontSize.sp,
           fontWeight: fontWeight,
           overflow: TextOverflow.ellipsis),

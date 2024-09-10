@@ -1,5 +1,7 @@
 import 'dart:ui';
 
+import 'package:flutter/material.dart';
+
 class AppColors{
   static const Color whiteColor = Color(0xffF4F9F5);
   static const Color greyColor = Color(0xff455560);
@@ -25,7 +27,11 @@ class AppColors{
   static const Color connectionCancelColor = Color(0xffFEEDB6);
   static const Color deepRed = Color(0xffc8002f);
   static const Color lightBlue = Color(0xffF4F8FF);
-
+  static const Color lightScaffoldColor = Colors.white;
+  static const Color lightPrimary = Color(0xff0ACF83);
+  static const Color lightCardColor = Color.fromARGB(106, 250, 250, 250);
+  static const Color darkScaffoldColor = Color.fromARGB(255, 9, 3, 27);
+  static const Color darkPrimary = Color.fromARGB(255, 94, 75, 239);
 
 
 }
