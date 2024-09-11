@@ -9,4 +9,5 @@ class Routes{
   static const String supportScreen = '/support';
   static const String profileScreen = '/profile';
   static const String viewAllDocSpeciality = '/viewAllDocSpeciality';
+  static const String bottomNavAnimatedScreen = '/bottomNavAnimatedScreen';
 }

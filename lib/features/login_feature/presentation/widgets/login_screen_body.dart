@@ -61,7 +61,7 @@ class LoginScreenBody extends StatelessWidget {
                   ),
                   CustomButton(
                       onPressed: () {
-                        context.pushNamed(Routes.rootScreen);
+                        context.pushNamed(Routes.bottomNavAnimatedScreen);
                       },
                       title: AppStrings.login,
                       textSize: 20.sp,

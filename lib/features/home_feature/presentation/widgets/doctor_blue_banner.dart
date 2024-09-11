@@ -12,7 +12,7 @@ class DoctorBlueBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 195.h,
+      height: 180.h,
       child: Stack(
         alignment: Alignment.bottomCenter,
         children: [
