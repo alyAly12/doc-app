@@ -5,6 +5,7 @@ import 'package:doc_app/features/splash_feature/presentation/screens/splash_scre
 import 'package:doc_app/root_screen.dart';
 import 'package:flutter/material.dart';
 
+import '../../bottom_nav_animated_screen.dart';
 import '../../features/calendar_feature/presentation/screens/calendar_screen.dart';
 import '../../features/home_feature/presentation/screens/home_screen.dart';
 import '../../features/home_feature/presentation/screens/inner_screens/view_all_doc_speciality.dart';
@@ -35,6 +36,8 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const ProfileScreen());
       case Routes.viewAllDocSpeciality:
         return MaterialPageRoute(builder: (_) => const ViewAllDocSpeciality());
+        case Routes.bottomNavAnimatedScreen:
+        return MaterialPageRoute(builder: (_) => const BottomNavAnimatedScreen());
       default:
         return null;
     }

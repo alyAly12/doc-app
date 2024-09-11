@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../../core/common_bloc/themes_cubit.dart';
 import '../../../../core/common_widgets/custom_text_widget.dart';
 
 class UserDetailRows extends StatelessWidget {
@@ -20,7 +22,7 @@ class UserDetailRows extends StatelessWidget {
               width: 50.w,
               child: Image.asset(image)),
           SizedBox(width: 10.w,),
-          CustomTextWidget(title:title,color: Colors.black,fontSize: 18 )
+          CustomTextWidget(title:title,color:BlocProvider.of<ThemesCubit>(context).state is ThemesDarkState? Colors.white: Colors.black,fontSize: 18 )
         ],
       ),
     );
