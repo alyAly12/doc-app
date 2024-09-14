@@ -20,7 +20,7 @@ class UserDetailRows extends StatelessWidget {
               width: 50.w,
               child: Image.asset(image)),
           SizedBox(width: 10.w,),
-          CustomTextWidget(title:title,fontSize: 18 )
+          CustomTextWidget(title:title,fontSize: 18,color: Colors.white, )
         ],
       ),
     );

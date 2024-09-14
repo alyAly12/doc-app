@@ -25,8 +25,8 @@ class UserNameAndImage extends StatelessWidget {
          const Column(
            crossAxisAlignment: CrossAxisAlignment.start,
            children: [
-             CustomTextWidget(title: 'Name',fontSize: 30,),
-             CustomTextWidget(title: 'example@email.com',fontSize: 15,),
+             CustomTextWidget(title: 'Name',fontSize: 30,color: Colors.white,),
+             CustomTextWidget(title: 'example@email.com',fontSize: 15,color: Colors.white,),
 
            ],
          ),

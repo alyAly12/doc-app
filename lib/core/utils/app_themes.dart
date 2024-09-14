@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 class AppThemes {
   static final appThemeData = {
     ThemeEnum.dark: ThemeData(
+      fontFamily: 'SofadiOne',
       primarySwatch: Colors.grey,
       primaryColor: Colors.black,
       brightness: Brightness.dark,
@@ -28,6 +29,7 @@ class AppThemes {
     //
 
     ThemeEnum.light: ThemeData(
+      fontFamily: 'SofadiOne',
       primarySwatch: Colors.grey,
       primaryColor: Colors.white,
       brightness: Brightness.light,

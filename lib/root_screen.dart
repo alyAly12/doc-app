@@ -23,7 +23,6 @@ class _RootScreenState extends State<RootScreen> {
   List<Widget> screens = [
     const HomeScreen(),
     const SupportScreen(),
-    const SizedBox.shrink(),
     const CalendarScreen(),
     const ProfileScreen(),
   ];
@@ -35,35 +34,26 @@ class _RootScreenState extends State<RootScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: SizedBox(
-        width: 70.w,
-        height: 70.h,
-        child:  Padding(
-          padding:  EdgeInsets.only(bottom: 1.h),
-          child: FloatingActionButton(
-
-            onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => const SearchScreen()));
-            },
-            shape: const RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(25)),
-            ),
-            backgroundColor: AppColors.mainColor,
-            child: SvgPicture.asset(
-              AssetsManager.searchImage,
-              height: 32.h,
-            ),
-          ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => const SearchScreen()));
+        },
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(25)),
+        ),
+        backgroundColor: AppColors.mainColor,
+        child: SvgPicture.asset(
+          AssetsManager.searchImage,
+          height: 32.h,
         ),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+
       body: PageView(
         controller: controller,
         physics: const NeverScrollableScrollPhysics(),
         children: screens,
       ),
       bottomNavigationBar: BottomNavigationBar(
-
           elevation: 0,
           selectedFontSize: 18.sp,
           unselectedFontSize: 15.sp,
@@ -79,14 +69,7 @@ class _RootScreenState extends State<RootScreen> {
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
             BottomNavigationBarItem(icon: Icon(Icons.message), label: 'Support'),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.access_alarms_rounded,
-                size: 0,
-              ),
-              label: '',
-            ),
-            BottomNavigationBarItem(icon: Icon(Icons.calendar_month), label: 'Calendar'),
+            BottomNavigationBarItem(icon: Icon(Icons.calendar_month), label: 'Dates'),
             BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
           ]),
     );
