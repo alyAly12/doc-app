@@ -28,7 +28,7 @@ class SpecializationListItem extends StatelessWidget {
                       border: Border.all(color: AppColors.mainColor,width: 2),
                       shape: BoxShape.circle),
                   child: CircleAvatar(
-                    radius: 40,
+                    radius: 25,
                     backgroundColor: AppColors.lightBlue,
                     child: Image.asset(
                       imagePath,
@@ -39,7 +39,7 @@ class SpecializationListItem extends StatelessWidget {
                   ),
                 )
               : CircleAvatar(
-                  radius: 40,
+                  radius: 25,
                   backgroundColor: AppColors.lightBlue,
                   child: Image.asset(
                     imagePath,

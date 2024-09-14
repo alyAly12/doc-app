@@ -1,3 +1,4 @@
+import 'package:doc_app/core/helper/extenstions.dart';
 import 'package:flutter/material.dart';
 
 class SearchScreen extends StatelessWidget {
@@ -5,8 +6,14 @@ class SearchScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
+    return  Scaffold(
+      appBar: AppBar(
+        leading: IconButton(onPressed: (){
+          context.pop();
+        },
+            icon: const Icon(Icons.arrow_back_ios)),
+      ),
+      body: const Center(
         child: Text('search'),
       ),
     );

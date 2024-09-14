@@ -23,7 +23,7 @@ class ProfileScreenBody extends StatelessWidget {
               Expanded(
                 child: Container(
                   height: ScreenUtil.defaultSize.height,
-                  width: ScreenUtil.defaultSize.width,
+                  width: ScreenUtil.defaultSize.height,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(topRight: Radius.circular(40.r),topLeft: Radius.circular(40.r)),
                     color: AppColors.mainColor

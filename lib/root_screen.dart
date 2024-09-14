@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-
 import 'core/utils/app_colors.dart';
 import 'core/utils/assets_manager.dart';
 import 'features/calendar_feature/presentation/screens/calendar_screen.dart';
@@ -47,6 +46,8 @@ class _RootScreenState extends State<RootScreen> {
           height: 32.h,
         ),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      backgroundColor: AppColors.mainColor,
 
       body: PageView(
         controller: controller,

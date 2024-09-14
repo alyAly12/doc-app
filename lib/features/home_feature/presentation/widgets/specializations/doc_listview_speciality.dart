@@ -1,6 +1,7 @@
+import 'package:doc_app/features/home_feature/presentation/screens/inner_screens/widgets/specialization_list_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'doc_listview_speciality_item.dart';
+import '../../screens/inner_screens/widgets/special_fake_model.dart';
 
 class DocListviewSpeciality extends StatefulWidget {
   const DocListviewSpeciality({
@@ -28,9 +29,11 @@ class _DocListviewSpecialityState extends State<DocListviewSpeciality> {
                   selectedSpecializationIndex = index;
                 });
               },
-              child: DocListviewSpecialityItem(
-                itemIndex: index,
-                selectedIndex: selectedSpecializationIndex,
+              child: SpecializationListItem(
+                  itemIndex: index,
+                  selectedIndex: selectedSpecializationIndex,
+                  title: SpecialFakeModel.specialityFakeList[index].name,
+                  imagePath: SpecialFakeModel.specialityFakeList[index].image,
               ),
             );
           }),
