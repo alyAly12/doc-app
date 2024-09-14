@@ -1,9 +1,8 @@
+import 'package:doc_app/core/common_bloc/theme_bloc/theme_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../core/common_bloc/themes_cubit.dart';
 import '../../../../core/common_widgets/custom_text_widget.dart';
-import '../../../../core/helper/theme_enum.dart';
 import '../../../../core/utils/app_colors.dart';
 
 class HomeTopBar extends StatelessWidget {
@@ -11,7 +10,7 @@ class HomeTopBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isChangeTheme = BlocProvider.of<ThemesCubit>(context).state is ThemesDarkState ? true : false;
+    // bool isChangeTheme = BlocProvider.of<ThemesCubit>(context).state is ThemesDarkState ? true : false;
     return Row(
       children: [
         Column(
@@ -19,9 +18,13 @@ class HomeTopBar extends StatelessWidget {
           children: [
             RichText(
               text: TextSpan(
-                  text: 'Hello, ',
-                  style: TextStyle( fontSize: 20.sp,color: BlocProvider.of<ThemesCubit>(context).state is ThemesDarkState ? Colors.white : Colors.black),
                   children: [
+                    TextSpan(
+                      text:'Hello ',
+                      style: TextStyle(
+                          color: AppColors.lightTitleColor,
+                          fontSize: 18.sp),
+                    ),
                     TextSpan(
                       text: 'Aly',
                       style: TextStyle(
@@ -55,9 +58,20 @@ class HomeTopBar extends StatelessWidget {
                   color: AppColors.lightTitleColor,
                 )
             ),
-            IconButton(onPressed: (){
-             isChangeTheme ? BlocProvider.of<ThemesCubit>(context).changeTheme(ThemeEnum.light, context) : BlocProvider.of<ThemesCubit>(context).changeTheme(ThemeEnum.dark, context);
-            }, icon:isChangeTheme ? const Icon(Icons.light_mode_outlined) : const Icon(Icons.dark_mode_outlined))
+            BlocBuilder<ThemeBloc, ThemeState>(
+              builder: (context, state) {
+                return Switch(
+                  activeColor: AppColors.mainColor,
+                    inactiveThumbColor: AppColors.mainColor,
+                    activeTrackColor: Colors.white,
+                    inactiveTrackColor: Colors.white,
+                    value: state.themeValue,
+                    onChanged: (value){
+                      value ?context.read<ThemeBloc>().add(LightThemeEvent()) :context.read<ThemeBloc>().add(DarkThemeEvent());
+                    }
+                );
+              },
+            )
           ],
         )
       ],

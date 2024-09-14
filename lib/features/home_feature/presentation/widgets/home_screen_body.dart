@@ -2,7 +2,6 @@ import 'package:doc_app/features/home_feature/presentation/widgets/doctors/recom
 import 'package:doc_app/features/home_feature/presentation/widgets/specializations/doc_listview_speciality.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../../../core/utils/app_strings.dart';
 import 'doctor_blue_banner.dart';
 import 'doctor_speciality_row.dart';
