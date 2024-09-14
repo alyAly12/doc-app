@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import '../../../../../core/common_bloc/themes_cubit.dart';
 import '../../../../../core/common_widgets/custom_text_widget.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/assets_manager.dart';
@@ -52,7 +50,7 @@ class DocListviewSpecialityItem extends StatelessWidget {
             fontSize: itemIndex == selectedIndex ? 14.sp : 12.sp,
             fontWeight:
                 itemIndex == selectedIndex ? FontWeight.w500 : FontWeight.w300,
-            color:BlocProvider.of<ThemesCubit>(context).state is ThemesDarkState ?Colors.white :AppColors.greyColor,
+
           )
         ],
       ),

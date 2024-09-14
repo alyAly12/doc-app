@@ -2,9 +2,7 @@ import 'package:doc_app/features/profile_feature/presentation/widgets/profile_he
 import 'package:doc_app/features/profile_feature/presentation/widgets/user_detail_rows.dart';
 import 'package:doc_app/features/profile_feature/presentation/widgets/user_name_and_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../core/common_bloc/themes_cubit.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_strings.dart';
 import '../../../../core/utils/assets_manager.dart';
@@ -25,27 +23,30 @@ class ProfileScreenBody extends StatelessWidget {
               Expanded(
                 child: Container(
                   height: ScreenUtil.defaultSize.height,
-                  width: ScreenUtil.defaultSize.height,
+                  width: ScreenUtil.defaultSize.width,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(topRight: Radius.circular(40.r),topLeft: Radius.circular(40.r)),
-                    color:BlocProvider.of<ThemesCubit>(context).state is ThemesDarkState?AppColors.bottomNavColor: Colors.white,
+                    color: AppColors.mainColor
                   ),
-                  child: Column(
-                    children: [
-                      SizedBox(height: 10.h,),
-                      const UserNameAndImage(),
-                      SizedBox(height: 10.h,),
-                      const AppointAndRecordRow(),
-                      SizedBox(height: 10.h,),
-                      UserDetailRows(title: AppStrings.personalInfo, image: AssetsManager.personInfo,onTap: (){},),
-                      SizedBox(height: 10.h,),
-                      UserDetailRows(title: AppStrings.testAndDiagnosis, image: AssetsManager.myTests,onTap: (){},),
-                      SizedBox(height: 10.h,),
-                      UserDetailRows(title: AppStrings.medicalRecords, image: AssetsManager.payments,onTap: (){},),
-                      SizedBox(height: 10.h,),
+                  child: Padding(
+                    padding:  EdgeInsets.symmetric(horizontal: 10.w),
+                    child: Column(
+                      children: [
+                        SizedBox(height: 20.h,),
+                        const UserNameAndImage(),
+                        SizedBox(height: 20.h,),
+                        const AppointAndRecordRow(),
+                        SizedBox(height: 20.h,),
+                        UserDetailRows(title: AppStrings.personalInfo, image: AssetsManager.personInfo,onTap: (){},),
+                        SizedBox(height: 20.h,),
+                        UserDetailRows(title: AppStrings.testAndDiagnosis, image: AssetsManager.myTests,onTap: (){},),
+                        SizedBox(height: 20.h,),
+                        UserDetailRows(title: AppStrings.medicalRecords, image: AssetsManager.payments,onTap: (){},),
+                        SizedBox(height: 20.h,),
 
 
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               )

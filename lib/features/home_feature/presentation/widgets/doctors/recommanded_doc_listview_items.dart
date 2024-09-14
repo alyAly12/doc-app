@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../../core/common_bloc/themes_cubit.dart';
 import '../../../../../core/common_widgets/custom_text_widget.dart';
 import '../../../../../core/utils/app_colors.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -66,7 +64,7 @@ class RecommendDocListviewItem extends StatelessWidget {
                 CustomTextWidget(
                   title: 'Name',
                   fontSize: 14.sp,
-                  color: BlocProvider.of<ThemesCubit>(context).state is ThemesDarkState ?Colors.white :AppColors.greyColor,
+
                 ),
                 SizedBox(
                   height: 5.h,
@@ -74,7 +72,7 @@ class RecommendDocListviewItem extends StatelessWidget {
                 CustomTextWidget(
                   title: 'General | 01234565',
                   fontSize: 12.sp,
-                  color: BlocProvider.of<ThemesCubit>(context).state is ThemesDarkState ?Colors.white :AppColors.greyColor,
+
                 ),
                 SizedBox(
                   height: 5.h,
@@ -82,7 +80,7 @@ class RecommendDocListviewItem extends StatelessWidget {
                 CustomTextWidget(
                   title: 'a@example.com',
                   fontSize: 12.sp,
-                  color: BlocProvider.of<ThemesCubit>(context).state is ThemesDarkState ?Colors.white :AppColors.greyColor,
+
                 ),
               ],
             ),

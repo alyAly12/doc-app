@@ -1,54 +1,53 @@
-
-
+import 'package:doc_app/core/helper/theme_enum.dart';
+import 'package:doc_app/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
-import 'app_colors.dart';
-
-class AppTheme {
-  static ThemeData themeData(
-      {required bool isDarkTheme, required BuildContext context}) {
-    return ThemeData(
-      textTheme: GoogleFonts.abyssinicaSilTextTheme(
-          Theme
-              .of(context)
-              .textTheme
+class AppThemes {
+  static final appThemeData = {
+    ThemeEnum.dark: ThemeData(
+      primarySwatch: Colors.grey,
+      primaryColor: Colors.black,
+      brightness: Brightness.dark,
+      dividerColor: Colors.black54,
+      floatingActionButtonTheme: const FloatingActionButtonThemeData(
+        backgroundColor: Colors.white,
       ),
-        scaffoldBackgroundColor: isDarkTheme
-            ? AppColors.darkScaffoldColor
-            : AppColors.lightScaffoldColor,
-        cardColor: isDarkTheme
-            ? const Color.fromARGB(255, 13, 6, 37)
-            : AppColors.lightCardColor,
-        brightness: isDarkTheme ? Brightness.dark : Brightness.light,
-        appBarTheme: AppBarTheme(
-          iconTheme:
-          IconThemeData(color: isDarkTheme ? Colors.white : Colors.black),
-          backgroundColor: isDarkTheme
-              ? AppColors.darkScaffoldColor
-              : AppColors.lightScaffoldColor,
+      textButtonTheme: TextButtonThemeData(
+        style: ButtonStyle(
+          foregroundColor: WidgetStateProperty.all(Colors.white),
         ),
-        inputDecorationTheme: InputDecorationTheme(
-          filled: true,
-          contentPadding: const EdgeInsets.all(10),
-          enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(
-                width: 1,
-                color: isDarkTheme ? Colors.white : Colors.black,
-              ),
-              borderRadius: BorderRadius.circular(8)),
-          errorBorder: OutlineInputBorder(
-              borderSide: BorderSide(
-                width: 1,
-                color: Theme.of(context).colorScheme.error,
-              ),
-              borderRadius: BorderRadius.circular(8)),
-          focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(
-                width: 1,
-                color: isDarkTheme ? Colors.white : Colors.black,
-              ),
-              borderRadius: BorderRadius.circular(8)),
-        ));
-  }
+      ),
+      textTheme: const TextTheme(
+        titleMedium: TextStyle(color: Colors.white),
+      ),
+      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+          backgroundColor: Colors.black, unselectedItemColor: Colors.white),
+    ),
+
+    //
+    //
+
+    ThemeEnum.light: ThemeData(
+      primarySwatch: Colors.grey,
+      primaryColor: Colors.white,
+      brightness: Brightness.light,
+      dividerColor: const Color(0xff757575),
+      floatingActionButtonTheme: const FloatingActionButtonThemeData(
+        backgroundColor: Colors.black,
+        foregroundColor: Colors.white,
+      ),
+      textButtonTheme: TextButtonThemeData(
+        style: ButtonStyle(
+          foregroundColor: WidgetStateProperty.all(Colors.black),
+        ),
+      ),
+      textTheme: const TextTheme(
+        titleMedium: TextStyle(color: Colors.black),
+      ),
+      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+          backgroundColor: Colors.white,
+          selectedItemColor: AppColors.mainColor,
+          unselectedItemColor: AppColors.lightTitleColor),
+    ),
+  };
 }
