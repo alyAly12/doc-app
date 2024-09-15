@@ -22,4 +22,10 @@ class AppStrings{
   static const String personalInfo = 'Personal Information';
   static const String testAndDiagnosis = 'Test & Diagnosis';
   static const String payment = 'Payment';
+  static const String about = 'About me';
+  static const String location = 'Location';
+  static const String reviews = 'Reviews';
+  static const String workingTime = 'Working Time';
+  static const String practicePlace = 'Practice Place';
+  static const String locationMap = 'Location Map: ';
 }
