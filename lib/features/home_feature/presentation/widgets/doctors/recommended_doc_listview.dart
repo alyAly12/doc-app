@@ -11,7 +11,12 @@ class RecommendedDocListview extends StatelessWidget {
           scrollDirection: Axis.vertical,
           itemCount: 10,
           itemBuilder: (context, index) {
-            return const RecommendDocListviewItem();
+            return  const RecommendDocListviewItem(
+                img: 'https://media.istockphoto.com/id/1922549572/photo/portrait-of-young-female-doctor-thinking.jpg?s=1024x1024&w=is&k=20&c=4lviwdg384zsZXU2J7Eex3G29PcoApNb9FjeDQEWlQo=',
+                name: 'Dr. John Doe',
+                email: 'a@example.com',
+                speciality: 'General | 01234565'
+            );
           }),
     );
   }

@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 
 import '../../bottom_nav_animated_screen.dart';
 import '../../features/calendar_feature/presentation/screens/calendar_screen.dart';
+import '../../features/dr_details_feature/presentation/screens/dr_details_screen.dart';
 import '../../features/home_feature/presentation/screens/home_screen.dart';
 import '../../features/home_feature/presentation/screens/inner_screens/view_all_doc_speciality.dart';
 import '../../features/profile_feature/presentation/screens/profile_screen.dart';
@@ -38,6 +39,8 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const ViewAllDocSpeciality());
         case Routes.bottomNavAnimatedScreen:
         return MaterialPageRoute(builder: (_) => const BottomNavAnimatedScreen());
+        case Routes.drDetailsScreen:
+        return MaterialPageRoute(builder: (_) =>  DrDetailsScreen(name: settings.arguments as String, img: settings.arguments as String, email: settings.arguments as String, speciality: settings.arguments as String,));
       default:
         return null;
     }
