@@ -1,8 +1,11 @@
 import 'package:doc_app/core/common_widgets/custom_button.dart';
 import 'package:doc_app/core/common_widgets/custom_text_widget.dart';
+import 'package:doc_app/core/helper/extenstions.dart';
 import 'package:doc_app/core/utils/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../../core/routing/routes.dart';
 
 
 class AboutTab extends StatelessWidget {
@@ -32,7 +35,9 @@ class AboutTab extends StatelessWidget {
           CustomButton(
             buttonHeight: 50.h,
               radius: 8,
-              onPressed: (){},
+              onPressed: (){
+              context.pushNamed(Routes.makeAppointmentScreen);
+              },
               title: 'Book an Appointment',
               textSize: 20.sp,
               showIcon: false),

@@ -11,4 +11,5 @@ class Routes{
   static const String viewAllDocSpeciality = '/viewAllDocSpeciality';
   static const String bottomNavAnimatedScreen = '/bottomNavAnimatedScreen';
   static const String drDetailsScreen = '/drDetailsScreen';
+  static const String makeAppointmentScreen = '/makeAppointmentScreen';
 }
