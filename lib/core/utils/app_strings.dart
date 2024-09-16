@@ -28,4 +28,8 @@ class AppStrings{
   static const String workingTime = 'Working Time';
   static const String practicePlace = 'Practice Place';
   static const String locationMap = 'Location Map: ';
+  static const String selectDate = 'Select Date';
+  static const String available = 'Available Times';
+  static const String confirm = 'Confirm';
+  static const String showAvailTimes = 'Available Times';
 }
