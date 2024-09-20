@@ -8,8 +8,9 @@ class Routes{
   static const String searchScreen = '/search';
   static const String supportScreen = '/support';
   static const String profileScreen = '/profile';
-  static const String specialityScreen = '/category';
+  static const String specializationScreen = '/category';
   static const String bottomNavAnimatedScreen = '/bottomNavAnimatedScreen';
   static const String drDetailsScreen = '/drDetailsScreen';
   static const String makeAppointmentScreen = '/makeAppointmentScreen';
+  static const String specialityScreen = '/specialityScreen';
 }

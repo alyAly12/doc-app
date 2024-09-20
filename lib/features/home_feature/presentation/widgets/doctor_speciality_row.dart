@@ -17,7 +17,7 @@ class DoctorSpecialityRow extends StatelessWidget {
         const Spacer(),
         GestureDetector(
           onTap: (){
-            context.pushNamed(Routes.specialityScreen);
+            context.pushNamed(Routes.specializationScreen);
           },
             child: Text(AppStrings.seeAll,style: TextStyle(
               fontSize: 15.sp,color: AppColors.mainColor,fontWeight: FontWeight.w400

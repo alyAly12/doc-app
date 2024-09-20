@@ -8,7 +8,7 @@ class AppStrings{
   static const String signup = 'Sign up';
   static const String bookAndSchedule = 'Book and\nSchedule with\nnearest doctor';
   static const String findDoc = 'Find Doctor';
-  static const String docSpecialist = 'Doctor Speciality';
+  static const String docSpecialist = 'Specialization';
   static const String seeAll = 'View All';
   static const String general = 'General';
   static const String pediatric = 'Pediatric';

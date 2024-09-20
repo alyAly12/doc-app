@@ -12,6 +12,7 @@ import '../../features/home_feature/presentation/screens/home_screen.dart';
 import '../../features/make_appointment_feature/presentation/screens/make_appointment_screen.dart';
 import '../../features/profile_feature/presentation/screens/profile_screen.dart';
 import '../../features/search_feature/presentation/screens/search_screen.dart';
+import '../../features/specialization_feature/presentation/screens/speciality_screen.dart';
 import '../../features/support_feature/presentation/screens/support_screen.dart';
 
 class AppRouter {
@@ -35,7 +36,7 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const SupportScreen());
       case Routes.profileScreen:
         return MaterialPageRoute(builder: (_) => const ProfileScreen());
-      case Routes.specialityScreen:
+      case Routes.specializationScreen:
         return MaterialPageRoute(builder: (_) => const SpecializationScreen());
       case Routes.bottomNavAnimatedScreen:
         return MaterialPageRoute(
@@ -50,6 +51,8 @@ class AppRouter {
                 ));
         case Routes.makeAppointmentScreen:
         return MaterialPageRoute(builder: (_) => const MakeAppointmentScreen());
+        case Routes.specialityScreen:
+        return MaterialPageRoute(builder: (_) =>  SpecialityScreen(title: settings.arguments as String,));
       default:
         return null;
     }
