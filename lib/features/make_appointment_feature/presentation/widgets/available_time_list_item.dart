@@ -1,18 +1,19 @@
-import 'package:doc_app/features/make_appointmet_feature/presentation/widgets/availabe_time_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'availabe_time_item.dart';
+
 class AvailableTimeListItem extends StatefulWidget {
   const AvailableTimeListItem({
-    super.key,
+    super.key, required this.onTimeSelected,
   });
-
+  final Function(int) onTimeSelected;
   @override
   State<AvailableTimeListItem> createState() => _AvailableTimeListItemState();
 }
-
+var selectedTimeIndex = 0;
 class _AvailableTimeListItemState extends State<AvailableTimeListItem> {
-  var selectedTimeIndex = 0;
+
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +27,7 @@ class _AvailableTimeListItemState extends State<AvailableTimeListItem> {
             onTap: () {
               setState(() {
                 selectedTimeIndex = index;
+                widget.onTimeSelected(selectedTimeIndex);
                 print(selectedTimeIndex);
               });
             },

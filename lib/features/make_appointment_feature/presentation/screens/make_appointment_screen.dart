@@ -1,6 +1,6 @@
 import 'package:doc_app/core/common_widgets/custom_text_widget.dart';
 import 'package:doc_app/core/helper/extenstions.dart';
-import 'package:doc_app/features/make_appointmet_feature/presentation/widgets/make_appointment_body.dart';
+import 'package:doc_app/features/make_appointment_feature/presentation/widgets/make_appoint_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -23,7 +23,7 @@ class MakeAppointmentScreen extends StatelessWidget {
           fontWeight: FontWeight.bold,
         ),
       ),
-      body: const MakeAppointmentBody(),
+      body: const MakeAppointBody(),
     );
   }
 }

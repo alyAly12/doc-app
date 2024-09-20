@@ -10,7 +10,7 @@ import '../../features/calendar_feature/presentation/screens/calendar_screen.dar
 import '../../features/dr_details_feature/presentation/screens/dr_details_screen.dart';
 import '../../features/home_feature/presentation/screens/home_screen.dart';
 import '../../features/home_feature/presentation/screens/inner_screens/view_all_doc_speciality.dart';
-import '../../features/make_appointmet_feature/presentation/screens/make_appointment_screen.dart';
+import '../../features/make_appointment_feature/presentation/screens/make_appointment_screen.dart';
 import '../../features/profile_feature/presentation/screens/profile_screen.dart';
 import '../../features/search_feature/presentation/screens/search_screen.dart';
 import '../../features/support_feature/presentation/screens/support_screen.dart';

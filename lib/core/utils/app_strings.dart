@@ -32,4 +32,9 @@ class AppStrings{
   static const String available = 'Available Times';
   static const String confirm = 'Confirm';
   static const String showAvailTimes = 'Available Times';
+  static const String appointmentType = 'Appointment Type';
+  static const String contin = 'Continue';
+  static const String summary = 'Summary';
+  static const String next = 'Next';
+  static const String back = 'Back';
 }
