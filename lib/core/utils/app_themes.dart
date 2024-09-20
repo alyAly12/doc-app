@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class AppThemes {
   static final appThemeData = {
     ThemeEnum.dark: ThemeData(
-      fontFamily: 'SofadiOne',
+      fontFamily: 'Comfortaa',
       primarySwatch: Colors.grey,
       primaryColor: Colors.black,
       brightness: Brightness.dark,
@@ -15,7 +15,7 @@ class AppThemes {
       ),
       textButtonTheme: TextButtonThemeData(
         style: ButtonStyle(
-          foregroundColor: WidgetStateProperty.all(Colors.white),
+          foregroundColor: WidgetStateProperty.all(AppColors.mainColor),
         ),
       ),
       textTheme: const TextTheme(
@@ -29,7 +29,7 @@ class AppThemes {
     //
 
     ThemeEnum.light: ThemeData(
-      fontFamily: 'SofadiOne',
+      fontFamily: 'Comfortaa',
       primarySwatch: Colors.grey,
       primaryColor: Colors.white,
       brightness: Brightness.light,
@@ -40,7 +40,7 @@ class AppThemes {
       ),
       textButtonTheme: TextButtonThemeData(
         style: ButtonStyle(
-          foregroundColor: WidgetStateProperty.all(Colors.black),
+          foregroundColor: WidgetStateProperty.all(AppColors.mainColor),
         ),
       ),
       textTheme: const TextTheme(

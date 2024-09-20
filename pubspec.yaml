@@ -16,7 +16,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
-version: 1.0.5+1
+version: 1.0.6+1
 
 environment:
   sdk: '>=3.4.3 <4.0.0'
@@ -48,6 +48,7 @@ dependencies:
   flutter_rating_bar: ^4.0.1
   rive: ^0.13.13
   syncfusion_flutter_datepicker: ^26.2.14
+  weekly_date_picker: ^1.4.2
   #statemanagement
   flutter_bloc: ^8.1.6
   #code generator
@@ -114,9 +115,9 @@ flutter:
       fonts:
          - asset: assets/fonts/SofadiOne-Regular.ttf
 
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
+    - family: Comfortaa
+      fonts:
+        - asset: assets/fonts/Comfortaa-VariableFont_wght.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #

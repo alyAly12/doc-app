@@ -17,6 +17,9 @@ class AssetsManager{
   static String payments = 'assets/images/pay.png';
   static String loadingLottie = 'assets/lotties/loading.json';
   static String mapShot = 'assets/images/mapshot.png';
+  static String home = 'assets/images/home.svg';
+  static String inPerson = 'assets/images/persons.svg';
+  static String phone = 'assets/images/phone.svg';
   ///speciality images
   static String generalSpeciality = 'assets/speciality/generalist.png';
   static String pediatricSpeciality = 'assets/speciality/pediatric.png';
