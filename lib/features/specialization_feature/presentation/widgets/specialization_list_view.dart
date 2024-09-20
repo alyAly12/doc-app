@@ -1,5 +1,5 @@
-import 'package:doc_app/features/home_feature/presentation/screens/inner_screens/widgets/special_fake_model.dart';
-import 'package:doc_app/features/home_feature/presentation/screens/inner_screens/widgets/specialization_list_item.dart';
+import 'package:doc_app/features/specialization_feature/presentation/widgets/special_fake_model.dart';
+import 'package:doc_app/features/specialization_feature/presentation/widgets/specialization_list_item.dart';
 import 'package:flutter/material.dart';
 
 class SpecializationListView extends StatefulWidget {

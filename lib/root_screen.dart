@@ -1,3 +1,4 @@
+import 'package:doc_app/features/specialization_feature/presentation/screens/specialization_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -7,7 +8,6 @@ import 'features/calendar_feature/presentation/screens/calendar_screen.dart';
 import 'features/home_feature/presentation/screens/home_screen.dart';
 import 'features/profile_feature/presentation/screens/profile_screen.dart';
 import 'features/search_feature/presentation/screens/search_screen.dart';
-import 'features/support_feature/presentation/screens/support_screen.dart';
 
 class RootScreen extends StatefulWidget {
   const RootScreen({super.key});
@@ -21,7 +21,7 @@ class _RootScreenState extends State<RootScreen> {
   int currentScreen = 0;
   List<Widget> screens = [
     const HomeScreen(),
-    const SupportScreen(),
+    const SpecializationScreen(),
     const CalendarScreen(),
     const ProfileScreen(),
   ];
@@ -69,7 +69,7 @@ class _RootScreenState extends State<RootScreen> {
           },
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-            BottomNavigationBarItem(icon: Icon(Icons.message), label: 'Support'),
+            BottomNavigationBarItem(icon: Icon(Icons.local_hospital_outlined), label: 'Speciality'),
             BottomNavigationBarItem(icon: Icon(Icons.calendar_month), label: 'Dates'),
             BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
           ]),

@@ -1,7 +1,7 @@
-import 'package:doc_app/features/home_feature/presentation/screens/inner_screens/widgets/specialization_list_item.dart';
+import 'package:doc_app/features/specialization_feature/presentation/widgets/specialization_list_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../screens/inner_screens/widgets/special_fake_model.dart';
+import '../../../../specialization_feature/presentation/widgets/special_fake_model.dart';
 
 class DocListviewSpeciality extends StatefulWidget {
   const DocListviewSpeciality({
