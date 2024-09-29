@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'core/helper/shared_pref_keys.dart';
 import 'core/routing/app_router.dart';
 import 'core/routing/routes.dart';
 
@@ -27,7 +28,7 @@ class DrApp extends StatelessWidget {
             splitScreenMode: true,
             child: MaterialApp(
               debugShowCheckedModeBanner: false,
-              initialRoute: Routes.splashScreen,
+              initialRoute:isLoggedInUser?Routes.rootScreen: Routes.splashScreen,
               title: 'Doctor App',
               theme: state.themeValue
                   ?AppThemes.appThemeData[ThemeEnum.dark]

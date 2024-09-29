@@ -1,5 +1,6 @@
 import 'package:doc_app/core/di/di.dart';
 import 'package:doc_app/core/routing/routes.dart';
+import 'package:doc_app/features/login_feature/logic/login_cubit.dart';
 import 'package:doc_app/features/login_feature/presentation/screens/login_screen.dart';
 import 'package:doc_app/features/signup_feature/presentation/screens/signup_screen.dart';
 import 'package:doc_app/features/specialization_feature/presentation/screens/specialization_screen.dart';
@@ -24,7 +25,11 @@ class AppRouter {
       case Routes.splashScreen:
         return MaterialPageRoute(builder: (_) => const SplashScreen());
       case Routes.loginScreen:
-        return MaterialPageRoute(builder: (_) => const LoginScreen());
+        return MaterialPageRoute(builder: (_) =>
+            BlocProvider(
+              create: (context) => getIt<LoginCubit>(),
+              child: const LoginScreen(),
+            ));
       case Routes.signupScreen:
         return MaterialPageRoute(builder: (_) =>
             BlocProvider(

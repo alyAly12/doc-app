@@ -1,10 +1,12 @@
-import 'package:doc_app/core/helper/extenstions.dart';
+
+import 'package:doc_app/features/login_feature/logic/login_cubit.dart';
+import 'package:doc_app/features/login_feature/presentation/widgets/login_bloc_listener.dart';
 import 'package:doc_app/features/login_feature/presentation/widgets/terms_and_conditions.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/common_widgets/custom_button.dart';
 import '../../../../core/common_widgets/custom_text_widget.dart';
-import '../../../../core/routing/routes.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_strings.dart';
 import 'dont_have_account_widget.dart';
@@ -61,7 +63,7 @@ class LoginScreenBody extends StatelessWidget {
                   ),
                   CustomButton(
                       onPressed: () {
-                        context.pushNamed(Routes.rootScreen);
+                        login(context);
                       },
                       title: AppStrings.login,
                       textSize: 20.sp,
@@ -79,6 +81,7 @@ class LoginScreenBody extends StatelessWidget {
                     height: 60.h,
                   ),
                   const DontHaveAccountWidget(),
+                  const LoginBlocListener()
                 ],
               )
             ],
@@ -86,5 +89,10 @@ class LoginScreenBody extends StatelessWidget {
         ),
       ),
     );
+  }
+  void login(BuildContext context){
+    if(context.read<LoginCubit>().formKey.currentState!.validate()){
+      context.read<LoginCubit>().emitLoginState();
+    }
   }
 }

@@ -1,8 +1,10 @@
 import 'package:doc_app/features/login_feature/presentation/widgets/password_validation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/common_widgets/custom_text_field.dart';
 import '../../../../core/helper/app_regex.dart';
+import '../../logic/login_cubit.dart';
 
 class EmailAndPasswordWidget extends StatefulWidget {
   const EmailAndPasswordWidget({super.key});
@@ -12,11 +14,7 @@ class EmailAndPasswordWidget extends StatefulWidget {
 }
 
 class _EmailAndPasswordWidgetState extends State<EmailAndPasswordWidget> {
-  TextEditingController emailController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
-  FocusNode emailNode = FocusNode();
-  FocusNode passwordNode = FocusNode();
-  final formKey = GlobalKey<FormState>();
+  late TextEditingController passwordController;
 
   bool obscureText = true;
   bool hasUpperCase = false;
@@ -28,7 +26,7 @@ class _EmailAndPasswordWidgetState extends State<EmailAndPasswordWidget> {
   @override
   void initState() {
     super.initState();
-    // passwordController = context.read<LoginCubit>().passwordController;
+    passwordController = context.read<LoginCubit>().passwordController;
     setupControllerListener();
   }
 
@@ -53,12 +51,12 @@ class _EmailAndPasswordWidgetState extends State<EmailAndPasswordWidget> {
   @override
   Widget build(BuildContext context) {
     return Form(
-      key: formKey,
+      key: context.read<LoginCubit>().formKey,
       child: Column(
         children: [
           CustomTextFormField(
-            controller: emailController,
-            focusNode: emailNode,
+            controller: context.read<LoginCubit>().emailController,
+            focusNode: context.read<LoginCubit>().emailNode,
             hintText: 'Enter Your Email',
             textInputAction: TextInputAction.next,
             validator: (value) {
@@ -73,8 +71,8 @@ class _EmailAndPasswordWidgetState extends State<EmailAndPasswordWidget> {
             height: 20.h,
           ),
           CustomTextFormField(
-            controller: passwordController,
-            focusNode: passwordNode,
+            controller: context.read<LoginCubit>().passwordController,
+            focusNode: context.read<LoginCubit>().passwordNode,
             hintText: 'Enter Your Password',
             textInputAction: TextInputAction.done,
             obsecureText: obscureText,
