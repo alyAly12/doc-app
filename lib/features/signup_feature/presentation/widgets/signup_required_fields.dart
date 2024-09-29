@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/common_widgets/custom_text_field.dart';
 import '../../../../core/helper/app_regex.dart';
 import '../../../login_feature/presentation/widgets/password_validation.dart';
+import '../../logic/signup_cubit.dart';
 
 class SignupRequiredFields extends StatefulWidget {
   const SignupRequiredFields({super.key});
@@ -12,18 +14,7 @@ class SignupRequiredFields extends StatefulWidget {
 }
 
 class _SignupRequiredFieldsState extends State<SignupRequiredFields> {
-  final formKey = GlobalKey<FormState>();
-  TextEditingController nameController = TextEditingController();
-  TextEditingController emailController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();
-  TextEditingController confirmPasswordController = TextEditingController();
-  TextEditingController phoneController = TextEditingController();
-  FocusNode nameNode = FocusNode();
-  FocusNode emailNode = FocusNode();
-  FocusNode passwordNode = FocusNode();
-  FocusNode confirmPasswordNode = FocusNode();
-  FocusNode phoneNode = FocusNode();
-
+  late TextEditingController passwordController;
   bool obscureText = true;
   bool hasUpperCase = false;
   bool hasLowerCase = false;
@@ -34,7 +25,7 @@ class _SignupRequiredFieldsState extends State<SignupRequiredFields> {
   @override
   void initState() {
     super.initState();
-    // passwordController = context.read<SignupCubit>().passwordController;
+    passwordController = context.read<SignupCubit>().passwordController;
     setupControllerListener();
   }
 
@@ -53,12 +44,12 @@ class _SignupRequiredFieldsState extends State<SignupRequiredFields> {
   @override
   Widget build(BuildContext context) {
     return Form(
-      key: formKey,
+      key: context.read<SignupCubit>().formKey,
       child: Column(
         children: [
           CustomTextFormField(
-            controller: nameController,
-            focusNode: nameNode,
+            controller: context.read<SignupCubit>().nameController,
+            focusNode: context.read<SignupCubit>().nameNode,
             hintText: 'Enter Your Name',
             textInputAction: TextInputAction.next,
             validator: (value) {
@@ -71,8 +62,8 @@ class _SignupRequiredFieldsState extends State<SignupRequiredFields> {
             height: 20.h,
           ),
           CustomTextFormField(
-            controller: emailController,
-            focusNode: emailNode,
+            controller:  context.read<SignupCubit>().emailController,
+            focusNode:  context.read<SignupCubit>().emailNode,
             hintText: 'Enter Your Email',
             textInputAction: TextInputAction.next,
             validator: (value) {
@@ -87,8 +78,8 @@ class _SignupRequiredFieldsState extends State<SignupRequiredFields> {
             height: 20.h,
           ),
           CustomTextFormField(
-            controller: phoneController,
-            focusNode: phoneNode,
+            controller:  context.read<SignupCubit>().phoneController,
+            focusNode:  context.read<SignupCubit>().phoneNode,
             hintText: 'Enter Your Phone Number',
             textInputAction: TextInputAction.next,
             validator: (value) {
@@ -103,8 +94,8 @@ class _SignupRequiredFieldsState extends State<SignupRequiredFields> {
             height: 20.h,
           ),
           CustomTextFormField(
-            controller: passwordController,
-            focusNode: passwordNode,
+            controller: context.read<SignupCubit>().passwordController,
+            focusNode:  context.read<SignupCubit>().passwordNode,
             hintText: 'Enter Your Password',
             textInputAction: TextInputAction.next,
             obsecureText: obscureText,
@@ -127,8 +118,8 @@ class _SignupRequiredFieldsState extends State<SignupRequiredFields> {
             height: 24.h,
           ),
           CustomTextFormField(
-            controller: confirmPasswordController,
-            focusNode: confirmPasswordNode,
+            controller: context.read<SignupCubit>().confirmPasswordController,
+            focusNode: context.read<SignupCubit>().confirmPasswordNode,
             hintText: 'Confirm Your Password',
             textInputAction: TextInputAction.done,
             obsecureText: obscureText,
