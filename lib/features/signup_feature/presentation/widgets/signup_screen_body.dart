@@ -1,5 +1,8 @@
+import 'package:doc_app/features/signup_feature/logic/signup_cubit.dart';
+import 'package:doc_app/features/signup_feature/presentation/widgets/signup_bloc_listener.dart';
 import 'package:doc_app/features/signup_feature/presentation/widgets/signup_required_fields.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/common_widgets/custom_button.dart';
 import '../../../../core/common_widgets/custom_text_widget.dart';
@@ -49,7 +52,9 @@ class SignupScreenBody extends StatelessWidget {
                     height: 50.h,
                   ),
                   CustomButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        validateSignUp(context);
+                      },
                       title: AppStrings.signup,
                       textSize: 20.sp,
                       textWeight: FontWeight.bold,
@@ -66,6 +71,7 @@ class SignupScreenBody extends StatelessWidget {
                     height: 60.h,
                   ),
                   const HaveAnAccountWidget(),
+                  const SignupBlocListener()
                 ],
               )
             ],
@@ -73,5 +79,10 @@ class SignupScreenBody extends StatelessWidget {
         ),
       ),
     );
+  }
+  void validateSignUp(BuildContext context) {
+    if(context.read<SignupCubit>().formKey.currentState!.validate()) {
+      context.read<SignupCubit>().emitSignupState();
+    }
   }
 }
