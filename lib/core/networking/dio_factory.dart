@@ -27,7 +27,7 @@ class DioFactory{
     };
   }
 
-  static void refreshHeaders()async{
+  static void refreshHeaders(String token)async{
     dio!.options.headers ={
       'Authorization':'Bearer ${await SharedPrefsHelper.getSecureString(SharedPrefKeys.userToken)}'
     };
